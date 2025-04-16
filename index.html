@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="template/vuexy-bootstrap-html-admin-template/assets/" data-template="vertical-menu-template">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Display Antrian - RS Asysyifaa</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="template/vuexy-bootstrap-html-admin-template/assets/img/icon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="template/vuexy-bootstrap-html-admin-template/assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="template/vuexy-bootstrap-html-admin-template/assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="template/vuexy-bootstrap-html-admin-template/assets/vendor/fonts/flag-icons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="template/vuexy-bootstrap-html-admin-template/assets/vendor/css/rtl/core.css"
+        class="template-customizer-core-css" />
+    <link rel="stylesheet" href="template/vuexy-bootstrap-html-admin-template/assets/vendor/css/rtl/theme-default.css"
+        class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="template/vuexy-bootstrap-html-admin-template/assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet"
+        href="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/js/template-customizer.js"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="template/vuexy-bootstrap-html-admin-template/assets/js/config.js"></script>
+</head>
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Menu -->
+
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <ul>
+                    <li>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="card mb-3"
+                                    style="width: 108%; height: 85px; margin-top: -5px; margin-left: -7%;">
+                                    <div class="app-brand demo mt-3">
+                                        <a href="index.html" class="app-brand-link">
+                                            <img src="template/assets/images/logo/logo-rs.png" alt="" width="140"
+                                                height="50" style="margin-right: 70px" />
+                                            <img src="template/assets/images/logo/logo-lafki.png" alt="" width="100"
+                                                height="60" style="margin-left: 45%;" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <br />
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="card mb-3" style="width: 120%; height: 350px;">
+                                    <h3 class="card-title" style="margin-top: 10px; margin-left: 30px; color: black;">
+                                        <b>No. Antrian :</b>
+                                    </h3>
+                                    <div class="card-body card-custom">
+                                        <h1 class="card-title" id="nomor"></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="card mb-3" style="width: 120%; height: 350px;">
+                                    <h3 class="card-title" style="margin-top: 10px; margin-left: 30px; color: black;">
+                                        <b>No. Antrian :</b>
+                                    </h3>
+                                    <div class="card-body card-custom">
+                                        <h1 class="card-title" id="nomorumum"></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <style>
+                #layout-menu {
+                    background-color: #007974 !important;
+                    width: 370px;
+                    /* Set the desired width */
+                }
+            </style>
+
+            <!-- / Menu --><!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
+
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme custom-navbar"
+                    id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="ti ti-menu-2 ti-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <!-- Cuaca -->
+                            <div class="weather-info text-primarys">
+                                <strong>DISPLAY ANTRIAN LOKET
+                                    RS-ASYSYIFAA</strong>
+                                | <span id="weather-display"></span> |
+                            </div>
+                            &nbsp;
+                            <!-- / Cuaca -->
+                            <!-- Tanggal -->
+                            <div class="date text-primarys">
+                                <span id="date-display"></span>
+                            </div>
+                            &nbsp;
+                            <!-- Jam -->
+                            <div class="clock text-primarys">
+                                <span id="clock-display"></span>
+                            </div>
+                            <!-- Style Switcher
+                <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+                    <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                        <i class="ti ti-md"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
+                        <li>
+                            <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
+                                <span class="align-middle"><i class="ti ti-sun me-2"></i>Light</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
+                                <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
+                                <span class="align-middle"><i class="ti ti-device-desktop me-2"></i>System</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li> -->
+                            <!-- / Style Switcher-->
+
+                            <!-- User -->
+
+                            <!--/ User -->
+                        </ul>
+                    </div>
+
+                    <!-- Search Small Screens -->
+                    <div class="navbar-search-wrapper search-input-wrapper d-none">
+                        <input type="text" class="form-control search-input container-xxl border-0"
+                            placeholder="Search..." aria-label="Search..." />
+                        <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+                    </div>
+                </nav>
+
+                <style>
+                    .custom-navbar {
+                        background-color: #007974 !important;
+                    }
+
+                    .custom-navbar .text-primarys {
+                        color: white;
+                    }
+                </style>
+                <script>
+                    // Mengambil data cuaca dari OpenWeatherMap API
+                    fetch(
+                        "https://api.openweathermap.org/data/2.5/weather?q=Leuwiliang,Bogor&lang=id&appid=42f9832c0f1db72a12a287fe2a50a62f"
+                    )
+                        .then((response) => response.json())
+                        .then((data) => {
+                            // Mendapatkan data cuaca terkini
+                            const cityName = data.name; // Nama kota
+                            const weather = data.weather[0];
+                            const temperature = data.main.temp - 273.15; // Konversi ke Celsius
+
+                            // Menampilkan data cuaca
+                            const weatherText = `Suhu ${temperature.toFixed(
+                                1
+                            )}°C di ${cityName}`;
+                            document.getElementById("weather-display").textContent =
+                                weatherText;
+                        })
+                        .catch((error) => {
+                            console.error("Error fetching weather data:", error);
+                        });
+                </script>
+                <script>
+                    // Fungsi untuk mendapatkan waktu aktual
+                    function getCurrentTime() {
+                        const date = new Date();
+                        const hours = String(date.getHours()).padStart(2, "0");
+                        const minutes = String(date.getMinutes()).padStart(2, "0");
+                        const seconds = String(date.getSeconds()).padStart(2, "0");
+                        return `${hours}:${minutes}:${seconds}`;
+                    }
+
+                    // Fungsi untuk mendapatkan nama hari
+                    function getCurrentDay() {
+                        const date = new Date();
+                        const days = [
+                            "Sunday",
+                            "Monday",
+                            "Tuesday",
+                            "Wednesday",
+                            "Thursday",
+                            "Friday",
+                            "Saturday",
+                        ];
+                        const dayIndex = date.getDay();
+                        return days[dayIndex];
+                    }
+
+                    // Fungsi untuk mendapatkan tanggal aktual
+                    function getCurrentDate() {
+                        const date = new Date();
+                        const day = String(date.getDate()).padStart(2, "0");
+                        const month = String(date.getMonth() + 1).padStart(2, "0");
+                        const year = date.getFullYear();
+                        const dayName = getCurrentDay();
+                        return `${dayName}, ${day}/${month}/${year}`;
+                    }
+
+                    // Fungsi untuk memperbarui jam pada halaman
+                    function updateClock() {
+                        const clockDisplay = document.getElementById("clock-display");
+                        clockDisplay.textContent = getCurrentTime();
+
+                        const dateDisplay = document.getElementById("date-display");
+                        dateDisplay.textContent = getCurrentDate();
+                    }
+
+                    // Memperbarui jam setiap detik
+                    setInterval(updateClock, 1000);
+
+                    // Memanggil fungsi updateClock untuk pertama kali agar jam dan tanggal ditampilkan segera
+                    updateClock();
+                </script>
+                <!-- / Navbar -->
+                <!-- / Navbar -->
+                <div class="content-wrapper">
+                    <!-- Content -->
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+
+                            <div class="col-12" style="margin-left: 11%; width: 90%; height: 20px;">
+                                <div class="card">
+                                    <div class="card-body card-custom text-center">
+                                        <video id="myVideo" style="margin-left: 7px;width: 100%;height: 100%;"
+                                        autoplay></video>
+                                    </div>
+                                </div>
+                                <!-- <div class="card">
+                                    <div class="card-body card-custom text-center">
+                                        <img id="myImage" src="video/pemberitahuan.png" style="margin-left: 7px;width: 100%;height: 100%;" alt="Deskripsi Gambar">
+                                    </div>
+                                </div> -->
+                                
+                                <br>
+                                
+                                <!-- Footer -->
+                                <div class="card" style="margin-top: 2%;">
+                                    <div class="row g-0">
+                                        <footer class="content-footer footer bg-footer-theme">
+                                            <div class="container-xxl">
+                                                <div class="footer-container py-2">
+                                                    <div class="running-text" style="color: black;">
+                                                        <span><b>Selamat Datang di Rumah Sakit Asysyifaa || RS Asysyifaa
+                                                                :: Melayani dengan hati Kesembuhan datangnya dari Allah
+                                                                SWT || Semoga Lekas Sembuh</b></span>
+                                                    </div>
+                                                    <div class="copyright-text"
+                                                        style="text-align: center; color: black;">
+                                                        ©
+                                                        <script>
+                                                            document.write(new Date().getFullYear());
+                                                        </script><a style="color: black;">- Developed with ❤️ by</a>
+                                                        <a href="#" target="_blank" class="fw-medium">Team IT RS
+                                                            Asysyifaa</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                        <!-- / Footer -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <script>
+                        // Array of YouTube video IDs
+                        const videoIds = ["2l0Fp0q14oo", "9ZyVl_jMypY"];
+
+                        let currentVideoIndex = 0;
+                        let player;
+
+                        // Function to load and play the current video
+                        function playCurrentVideo() {
+                            if (player) {
+                                player.loadVideoById(videoIds[currentVideoIndex]);
+                                player.playVideo();
+                            }
+                        }
+
+                        // Function to initialize YouTube Player API
+                        function onYouTubeIframeAPIReady() {
+                            player = new YT.Player("video-container", {
+                                height: "400",
+                                width: "100%",
+                                videoId: videoIds[currentVideoIndex],
+                                events: {
+                                    onStateChange: function (event) {
+                                        if (event.data === YT.PlayerState.ENDED) {
+                                            // Video has ended, move to the next video
+                                            currentVideoIndex =
+                                                (currentVideoIndex + 1) % videoIds.length;
+                                            playCurrentVideo();
+                                        }
+                                    },
+                                },
+                            });
+
+                            // Use setTimeout to delay autoplay after the player is ready
+                            setTimeout(playCurrentVideo, 1000); // Adjust the delay time if needed
+                        }
+
+                        // Load YouTube Player API asynchronously
+                        const tag = document.createElement("script");
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        const firstScriptTag = document.getElementsByTagName("script")[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                    </script>
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+
+
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <style>
+            .item img {
+                width: 20%;
+                height: 300px;
+                object-fit: cover;
+                /* or object-fit: contain, depending on your preference */
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+
+            .running-text {
+                flex-grow: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                position: relative;
+                margin-right: 20px;
+                /* Add some space between running text and copyright text */
+            }
+
+            .running-text span {
+                display: inline-block;
+                padding-left: 100%;
+                animation: marquee 20s linear infinite;
+            }
+
+            @keyframes marquee {
+                from {
+                    transform: translateX(100%);
+                }
+
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+
+            .copyright-text {
+                white-space: nowrap;
+                /* Prevent the text from wrapping */
+            }
+        </style>
+        <style>
+            #layout-menu {
+                background-color: #007974 !important;
+                width: 500px;
+                /* Set the desired width */
+            }
+
+            #layout-navbar {
+                margin-left: 15%;
+                width: 65%;
+                /* Set the desired width */
+            }
+        </style>
+        <!-- / Layout wrapper -->
+
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="app/antrian.js"></script>
+        <audio id="myAudio" src="assets/intro.mp3"></audio>
+
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/popper/popper.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/js/bootstrap.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/node-waves/node-waves.js"></script>
+        <script
+            src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/hammer/hammer.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/i18n/i18n.js"></script>
+        <script
+            src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/vendor/js/menu.js"></script>
+
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+        <script
+            src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+        <script
+            src="template/vuexy-bootstrap-html-admin-template/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+
+        <!-- Main JS -->
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/js/tables-datatables-advanced.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/js/main.js"></script>
+
+        <!-- Page JS -->
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/js/dashboards-ecommerce.js"></script>
+        <script src="template/vuexy-bootstrap-html-admin-template/assets/js/form-wizard-icons.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastify/3.17.0/fastify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ws/8.4.0/ws.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script> -->
+</body>
+
+</html>
